@@ -4,6 +4,7 @@ import './App.css';
 import FirstComponent from './components/learning-examples/FirstComponent';
 import SecondComponent from './components/learning-examples/SecondComponent';
 import ThirdComponent from './components/learning-examples/ThirdComponent';
+import CounterButton from './components/counter/CounterButton';
 import Counter from './components/counter/Counter';
 
 class App extends Component {
@@ -11,13 +12,7 @@ class App extends Component {
   return (
     <div className="App">
       Test App root.
-      <FirstComponent />
-      <SecondComponent />
-      <ThirdComponent />
-      <Counter by={1}/>
-      <Counter by={5}/>
-      <Counter by={10}/>
-      <Counter />
+      <Counter/>
     </div>
   );
   }
