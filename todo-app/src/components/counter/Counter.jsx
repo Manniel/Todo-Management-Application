@@ -19,9 +19,9 @@ class Counter extends Component {
       <CounterButton op="+" by={1} incrementMethod={this.increment} finalCounter={this.state.counter}/>
       <CounterButton op="+" by={5} incrementMethod={this.increment} finalCounter={this.state.counter}/>
       <CounterButton op="+" by={10} incrementMethod={this.increment} finalCounter={this.state.counter}/>
-      <CounterButton op="-" by={1} incrementMethod={this.decrement} finalCounter={this.state.counter}/>
-      <CounterButton op="-" by={5} incrementMethod={this.decrement} finalCounter={this.state.counter}/>
-      <CounterButton op="-" by={10} incrementMethod={this.decrement} finalCounter={this.state.counter}/>
+      <CounterButton op="-" by={1} incrementMethod={this.decrement} finalCounter={this.state.counter} className="decrementButton"/>
+      <CounterButton op="-" by={5} incrementMethod={this.decrement} finalCounter={this.state.counter} className="decrementButton"/>
+      <CounterButton op="-" by={10} incrementMethod={this.decrement} finalCounter={this.state.counter} className="decrementButton"/>
       <CounterButton op="Reset" incrementMethod={this.reset} finalCounter={this.state.counter}/>
 
       
