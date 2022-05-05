@@ -6,22 +6,19 @@ class CounterButton extends Component{
     constructor(){
         super();
 
-        this.increment = this.increment.bind(this);
 
     }
 
     render() {
         return(
             <div className="counter">
-                <button className="counterButton" onClick={this.increment}> {this.props.op}{this.props.by}</button>
+                <button className="counterButton" onClick={() => this.props.incrementMethod(this.props.by)}> {this.props.op}{this.props.by}</button>
             </div>
         )
         
     }
 
-    increment(){
-        this.props.incrementMethod(this.props.by); 
-    }
+    
 }
 
 
