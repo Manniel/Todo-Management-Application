@@ -20,28 +20,25 @@ class LoginComponent extends Component{
             password: ""
         }
 
-        this.handleUsernameChange = this.handleUsernameChange.bind(this)
-        this.handlePasswordChange = this.handlePasswordChange.bind(this)
+        this.handleChange = this.handleChange.bind(this);
 
     }
 
-    handleUsernameChange(event){
+    //When value changes, we change the state and changes in the UI transforms the component to a CONTROLLED COMPONENT
+    handleChange(event){
+        console.log(event.target.name)
         this.setState({
-            username: event.target.value
+            [event.target.name]: event.target.value
         })
     }
     
-    handlePasswordChange(event){
-        this.setState({
-            password: event.target.value
-        })
-    }
+    
 
     render(){
         return(
             <div>
-                User Name: <input type="text" name="Username" value={this.state.username} onChange={this.handleUsernameChange}></input>
-                Password: <input type="password" name="Password" vale={this.state.password} onChange={this.handlePasswordChange}></input>
+                User Name: <input type="text" name="username" value={this.state.username} onChange={this.handleChange}></input>
+                Password: <input type="password" name="password" vale={this.state.password} onChange={this.handleChange}></input>
                 <button className="Login">Login</button>
             </div>
         )
